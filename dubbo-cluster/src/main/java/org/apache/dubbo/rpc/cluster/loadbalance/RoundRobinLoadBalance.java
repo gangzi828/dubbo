@@ -32,8 +32,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Round robin load balance.
- * 
- * @author jason
  */
 public class RoundRobinLoadBalance extends AbstractLoadBalance {
     public static final String NAME = "roundrobin";
@@ -103,14 +101,11 @@ public class RoundRobinLoadBalance extends AbstractLoadBalance {
             String identifyString = invoker.getUrl().toIdentityString();
             WeightedRoundRobin weightedRoundRobin = map.get(identifyString);
             int weight = getWeight(invoker, invocation);
-            if (weight < 0) {
-                weight = 0;
-            }
+
             if (weightedRoundRobin == null) {
                 weightedRoundRobin = new WeightedRoundRobin();
                 weightedRoundRobin.setWeight(weight);
                 map.putIfAbsent(identifyString, weightedRoundRobin);
-                weightedRoundRobin = map.get(identifyString);
             }
             if (weight != weightedRoundRobin.getWeight()) {
                 //weight changed

@@ -17,6 +17,7 @@
 package com.alibaba.dubbo.config.spring.context.annotation.provider;
 
 import com.alibaba.dubbo.config.spring.api.HelloService;
+
 import org.springframework.stereotype.Service;
 
 /**
@@ -26,7 +27,7 @@ import org.springframework.stereotype.Service;
  * @since TODO
  */
 @Service
-@com.alibaba.dubbo.config.annotation.Service
+@com.alibaba.dubbo.config.annotation.Service(parameters = {"sayHello.timeout", "3000"})
 public class DefaultHelloService implements HelloService {
 
     @Override

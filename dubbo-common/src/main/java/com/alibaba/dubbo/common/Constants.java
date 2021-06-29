@@ -599,6 +599,10 @@ public class Constants {
 
     public static final String EXECUTOR_SERVICE_COMPONENT_KEY = ExecutorService.class.getName();
 
+    public static final String SHARE_EXECUTOR_KEY = "share.threadpool";
+
+    public static final String SHARED_CONSUMER_EXECUTOR_PORT = "consumer.executor.port";
+
     public static final String GENERIC_SERIALIZATION_NATIVE_JAVA = "nativejava";
 
     public static final String GENERIC_SERIALIZATION_DEFAULT = "true";
@@ -635,8 +639,38 @@ public class Constants {
 
     public static final String MULTICAST = "multicast";
 
-    /*
-     * private Constants(){ }
-     */
+    public static final String SERVICE_IMPL_CLASS = "service.classimpl";
+
+    public static final String TAG_KEY = "dubbo.tag";
+
+    public static final String FORCE_USE_TAG = "dubbo.force.tag";
+
+    public static final String TELNET = "telnet";
+
+    public static final String BACKLOG_KEY = "backlog";
+
+    public static final int DEFAULT_BACKLOG = 1024;
+
+    public static final String DOT_REGEX = "\\.";
+
+    public static final String UNDERLINE_SEPARATOR = "_";
+
+    public static final String CLASS_DESERIALIZE_BLOCK_ALL = "dubbo.security.serialize.blockAllClassExceptAllow";
+
+    public static final String CLASS_DESERIALIZE_ALLOWED_LIST = "dubbo.security.serialize.allowedClassList";
+
+    public static final String CLASS_DESERIALIZE_BLOCKED_LIST = "dubbo.security.serialize.blockedClassList";
+
+    public static final String ENABLE_NATIVE_JAVA_GENERIC_SERIALIZE = "dubbo.security.serialize.generic.native-java-enable";
+
+    public static final String SERIALIZE_BLOCKED_LIST_FILE_PATH = "security/serialize.blockedlist";
+
+    public static final String DEFAULT_VERSION = "0.0.0";
+
+    public static final String SERIALIZATION_SECURITY_CHECK_KEY = "serialization.security.check";
+
+    public static final String SERIALIZATION_ID_KEY = "serialization_id";
+
+    public static final String INVOCATION_KEY = "invocation";
 
 }
